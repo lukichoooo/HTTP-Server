@@ -1,0 +1,4 @@
+{
+  "webroot": "./public",
+  "port": 8080
+}
