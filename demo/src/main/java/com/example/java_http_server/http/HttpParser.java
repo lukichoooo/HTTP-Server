@@ -29,7 +29,7 @@ public class HttpParser {
             HttpRequest request = new HttpRequest();
 
             parseRequestLine(reader, request);
-            parseReaders(reader, request);
+            parseHeaders(reader, request);
             parseBody(reader, request);
 
             return request;
@@ -45,7 +45,7 @@ public class HttpParser {
         boolean requestTargetParsed = false;
 
         StringBuilder requestLine = new StringBuilder();
-        int _byte = 0;
+        int _byte = -1;
         while ((_byte = reader.read()) != -1) { // read next byte input
 
             if (_byte == CR) {
@@ -96,8 +96,27 @@ public class HttpParser {
         }
     }
 
-    private void parseReaders(InputStreamReader reader, HttpRequest request) {
-        // TODO Auto-generated method stub
+    private void parseHeaders(InputStreamReader reader, HttpRequest request) throws HttpParsingException { // TODO fix this shi
+
+        StringBuilder headerLine = new StringBuilder();
+        int _byte = -1;
+        try {
+            while ((_byte = reader.read()) != -1) {
+                if (_byte == CR) {
+                    if ((_byte = reader.read()) == LF) {
+                        if (headerLine.length() == 0) {
+                            return;
+                        }
+                        request.setHttpHeader(headerLine.toString());
+                        headerLine.delete(0, headerLine.length());
+                        continue; //  so we dont append LF to headerLine
+                    }
+                }
+                headerLine.append((char) _byte);
+            }
+        } catch (IOException e) {
+            throw new HttpParsingException("Failed to read headers", HttpStatusCode.SERVER_ERROR_INTERNAL_SERVER_ERROR);
+        }
     }
 
     private void parseBody(InputStreamReader reader, HttpRequest request) {

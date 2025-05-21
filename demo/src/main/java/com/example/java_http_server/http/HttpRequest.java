@@ -1,20 +1,24 @@
 package com.example.java_http_server.http;
 
-import java.net.http.HttpHeaders;
 import java.util.Objects;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.example.java_http_server.http.exception.HttpParsingException;
 import com.example.java_http_server.http.exception.HttpStatusCode;
 
 public class HttpRequest extends HttpMessage {
 
+    private Logger LOGGER = LoggerFactory.getLogger(HttpRequest.class);
+
     private HttpMethod.Method method = null;
     private String requestTarget = null;
+
     private HttpVersion bestCompatableVersion = null;
     private String requestedVersion = null;
 
-    // Headers
-    private HttpHeaders headers = null;
+    private HttpHeaders headers = new HttpHeaders();
 
     HttpRequest() {
     }
@@ -58,6 +62,16 @@ public class HttpRequest extends HttpMessage {
         System.out.println(version);
 
         this.bestCompatableVersion = HttpVersion.getBestCompatableVersion(version);
+    }
+
+    public void setHttpHeader(String header) throws HttpParsingException {
+        if (header == null || header.isEmpty())
+            return;
+        this.headers.addHeader(header);
+    }
+
+    public String getHttpHeaderValue(String name) throws HttpParsingException {
+        return this.headers.getHeaderValue(name);
     }
 
 }

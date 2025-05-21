@@ -7,6 +7,7 @@ C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\exampl
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\connection\SocketThread.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\exception\HttpParsingException.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\exception\HttpStatusCode.java
+C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\HttpHeaders.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\HttpMessage.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\HttpMethod.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\main\java\com\example\java_http_server\http\HttpParser.java

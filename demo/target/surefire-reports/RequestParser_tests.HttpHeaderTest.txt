@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: RequestParser_tests.HttpParserTest
+Test set: RequestParser_tests.HttpHeaderTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in RequestParser_tests.HttpParserTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 s -- in RequestParser_tests.HttpHeaderTest

@@ -1,4 +1,6 @@
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\Configuration_testing\ConfigurationTest.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\json_test\JsonTest.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\json_test\POJO.java
+C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\RequestParser_tests\HttpHeaderTest.java
 C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\RequestParser_tests\HttpParserTest.java
+C:\Users\khund\Java HTTP server\simple_http_server\demo\src\test\java\RequestParser_tests\HttpVersionTest.java
