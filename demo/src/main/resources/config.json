@@ -1,4 +1,4 @@
 {
-  "webroot": "./public",
+  "webroot": "src/main/java/com/example/java_http_server/WebRoot",
   "port": 8080
 }

@@ -96,7 +96,7 @@ public class HttpParser {
         }
     }
 
-    private void parseHeaders(InputStreamReader reader, HttpRequest request) throws HttpParsingException { // TODO fix this shi
+    private void parseHeaders(InputStreamReader reader, HttpRequest request) throws HttpParsingException {
 
         StringBuilder headerLine = new StringBuilder();
         int _byte = -1;

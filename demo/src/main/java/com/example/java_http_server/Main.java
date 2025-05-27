@@ -14,8 +14,7 @@ public class Main {
     public static void main(String[] args) {
         LOGGER.info("Starting Server...");
 
-        String configPath = "C:\\Users\\khund\\Java HTTP server\\simple_http_server\\demo\\src\\main\\resources\\config.json";
-        ConfigurationManager.loadConfiguration(configPath);
+        ConfigurationManager.loadConfiguration("demo\\src\\main\\resources\\config.json");
 
         Configuration config = ConfigurationManager.getInstance().getCurrentConfiguration();
         SocketListenerThread socketListenerThread = new SocketListenerThread(config.getPort(), config.getWebroot());
